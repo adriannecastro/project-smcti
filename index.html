@@ -23,10 +23,10 @@
       /* Animação da máquina de escrever */
       .typing {
         overflow: hidden;
-        white-space: nowrap;
         border-right: 2px solid white;
-        animation: typing 2.5s steps(20, end) infinite alternate,
+        animation: typing 2.5s steps(40, end) infinite alternate,
           blink 0.7s infinite;
+        white-space: nowrap; /* Mantém em linha única por padrão */
       }
 
       /* Animação de digitação */
@@ -45,19 +45,33 @@
           border-color: transparent;
         }
       }
+
+      /* Estilos para dispositivos móveis */
+      @media (max-width: 640px) {
+        .typing {
+          white-space: normal; /* Permite a quebra de linha */
+          display: block;
+          width: 100%;
+        }
+        .mobile-break {
+          display: block; /* Força quebra de linha apenas em mobile */
+        }
+      }
     </style>
   </head>
-  <body class="bg-[#f2f2f2] font-[Poppins]">
+  <body class="bg-[#f2f2f2] font-[Poppins] flex justify-center items-center">
     <div
-      class="bg-[#f2f2f2] w-full h-screen flex items-center justify-between p-10"
+      class="bg-[#f2f2f2] w-full lg:h-screen flex flex-col lg:flex-row items-center justify-center lg:justify-between lg:items-center p-10"
     >
-      <div class="ml-24 w-full z-10">
-        <h1 class="text-4xl font-semibold">Olá, sou Adrianne Castro.</h1>
+      <div class="lg:ml-24 w-full lg:w-1/2 xl:w-full z-10">
+        <h1 class="text-3xl md:text-4xl font-semibold flex-wrap">
+          Olá, sou Adrianne Castro.
+        </h1>
         <p class="text-lg typing">
-          Sou apaixonada por tecnologia e estou sempre em busca de aprender
-          mais.
+          Sou apaixonada por tecnologia e estou sempre
+          <span class="mobile-break">em busca de aprender mais.</span>
         </p>
-        <div class="flex space-x-4 mt-32 justify-center">
+        <div class="flex space-x-4 my-10 md:my-24 lg:mt-32 justify-center">
           <!-- Instagram -->
           <a
             href="https://instagram.com/adriannecastro"
@@ -99,7 +113,11 @@
         class="w-full flex justify-center items-center"
         x-data="{ image: 'assets/profile-image.svg'}"
       >
-        <img :src="image" alt="profile image" class="profile-image" />
+        <img
+          :src="image"
+          alt="profile image"
+          class="profile-image lg:w-86 xl:w-full"
+        />
       </div>
     </div>
     <!-- Modal -->
