@@ -533,14 +533,8 @@
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
   }
-  .mt-32 {
-    margin-top: calc(var(--spacing) * 32);
-  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
-  }
-  .ml-24 {
-    margin-left: calc(var(--spacing) * 24);
   }
   .block {
     display: block;
@@ -561,32 +555,11 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
-  .h-full {
-    height: 100%;
-  }
-  .h-screen {
-    height: 100vh;
-  }
-  .w-1\/2 {
-    width: calc(1/2 * 100%);
-  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
-  }
-  .w-32 {
-    width: calc(var(--spacing) * 32);
-  }
-  .w-36 {
-    width: calc(var(--spacing) * 36);
-  }
-  .w-52 {
-    width: calc(var(--spacing) * 52);
-  }
-  .w-86 {
-    width: calc(var(--spacing) * 86);
   }
   .w-full {
     width: 100%;
@@ -681,17 +654,9 @@
   .font-\[Poppins\] {
     font-family: Poppins;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-4xl {
-    font-size: var(--text-4xl);
-    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-lg {
     font-size: var(--text-lg);
@@ -708,15 +673,6 @@
   .tracking-wide {
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
-  }
-  .break-words {
-    overflow-wrap: break-word;
-  }
-  .break-all {
-    word-break: break-all;
-  }
-  .whitespace-normal {
-    white-space: normal;
   }
   .text-black {
     color: var(--color-black);
@@ -863,18 +819,6 @@
   .lg\:p-8 {
     @media (width >= 64rem) {
       padding: calc(var(--spacing) * 8);
-    }
-  }
-  .md\:lg\:ml-24 {
-    @media (width >= 48rem) {
-      @media (width >= 64rem) {
-        margin-left: calc(var(--spacing) * 24);
-      }
-    }
-  }
-  .xl\:h-screen {
-    @media (width >= 80rem) {
-      height: 100vh;
     }
   }
   .xl\:w-full {
